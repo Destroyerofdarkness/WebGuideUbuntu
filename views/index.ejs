@@ -1,0 +1,78 @@
+<%- include("./partials/head.ejs") %>
+  <%- include("./partials/header.ejs") %>
+    <main>
+      <h2>1. Oppsetting av VM-en</h2>
+      <section class="stage">
+        <img src="/img/stage1.png" alt="pic" />
+        <p>
+          Det første vi skal gjøre før vi setter opp Nginx og serveren, er å sette opp vår egen virtuelle maskin.
+          Hensikten med en virtuell maskin er at når vi skal kjøre en server da bruker ikke pc-en vår
+          noe som helst kraft for å kjøre den. Det er også for at pcen vår ikke blir ødelagt til slutt hvis vi kjører
+          den 24/7.
+        </p>
+        <p>Virtuell maskin funker slik at
+          det lager en fake pc som finnes på en av proxmox sine servere, så det har ingenting å si for pc-en vår når vi
+          kjører noe på den. For å
+          opprette VM-en, klikk på «Create VM».</p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage2.png" alt="pic" />
+        <p>
+          Deretter skal vi gi den virtuelle maskinen et navn og en VM-ID. Det spiller egentlig ingen rolle hvilket navn
+          eller hvilken VM-ID du velger, men det er fint å bruke som referanse til IP-adressen din. Du må også velge en
+          pool som VM-en skal plasseres i.
+        </p>
+        <p>En pool er ansvarlig for hvilket nettverk vm-en skal være i. Det betyr at
+          hvis vi er i pool "14" da skal vi være innen for "10.12.14.0/24" nettverket. Velg den du kan bruke og se, og
+          klikk deretter «Next»</p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage4.png" alt="pic" />
+        <p>
+          For å installere et operativsystem må du velge et ISO-image som VM-en skal bruke som OS. En ISO-image er
+          vanligvis en fil på en USB eller en annen enhet, som har massevis av informasjon om et operativsystem. Pc-en
+          vår bruker den filen for å laste ned operativ
+          systemet. Det vi
+          skal bruke er en ISO-image som er lagret i skyen på proxmox.
+          Velg Ubuntu 22.04 for
+          dette, og gå deretter til diskstørrelse.
+        </p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage6.png" alt="pic" />
+        <p>
+          Når du velger diskstørrelsen, er 16 GB den anbefalte størrelsen fra meg. Du trenger ikke mye diskplass fordi
+          serveren din ikke bruker særlig mye plass på disken. Diskstørrelsen er ansvarlig for hvor mye lagringsplass vi
+          har på pc-en og hvor mye vi kan bruke. Hvis vi går over grensen da sier pc-en vår nei til å laste ned flere
+          ting.
+        </p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage7.png" alt="pic">
+        <p>På dette stadiet må du velge hvor mange sokler og kjerner CPU-en din skal ha. Her er det viktig å velge 4
+          kjerner og 8 sockets for å få maksimalt ut av CPU-en. Du kan også endre typen CPU du bruker, for eksempel hvis
+          du vil kjøre en MongoDB-server. Når du er ferdig, kan du gå videre til minne.
+        </p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage8.png" alt="pic">
+        <p>Her velger du hvor mye RAM den virtuelle maskinen din skal ha. Hvis du bruker VM-en til å hoste flere ting,
+          er det best å ha minst 16 GB, men for nå bruker vi bare minimum 8192 MB, som tilsvarer 8 GB. Du må også sette
+          minimumsverdien til halvparten av dette, altså 4096 MB.
+        </p>
+        <p>RAM står for "Random Access Memory" og den brukes for
+          å kjøre programmer på pc-en vår. Hvert enkel programm bruker den type minnen, og uten den så hadde ikke noe
+          funka. Vi kunne sikkert ikke engang starta opp pc-en normalt på grunn av det hadde sikkert kommet et høy lyd
+          fra pc-en vår som skal signalisere error. Når du har satt alt, kan du gå videre til
+          bekreftelsessiden.</p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage11.png" alt="pic">
+        <p>Her kan du lese egenskapene til PC-en din før du oppretter VM-en. Når du er ferdig, kan du klikke «Finish».
+          Når du er ferdig, kan du gå videre til neste side i guiden min: «Installing Ubuntu».
+        </p>
+      </section>
+    </main>
+    </body>
+
+    </html>

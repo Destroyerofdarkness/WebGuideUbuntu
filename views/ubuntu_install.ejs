@@ -1,0 +1,130 @@
+<%- include("./partials/head.ejs") %>
+  <%- include("./partials/header.ejs") %>
+    <main>
+      <h2>2. Innstalasjon av Ubuntu</h2>
+      <section class="stage">
+        <img src="/img/stage12.png" alt="pic">
+        <p>Når du er ferdig med å sette opp VM-en din, kan du begynne å installere Ubuntu på den virtuelle maskinen.
+          For å starte VM-en kan du klikke på «Start now»-knappen i midten. Det kan ta litt tid før den starter, så vær
+          tålmodig.
+        </p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage13.png" alt="pic">
+        <p>Når den virtuelle maskinen din er startet, kan du klikke på «Try or Install Ubuntu Server» for å begynne.
+          Deretter vil du konfigurere IP-adressen din, gi serveren et navn og velge noen alternativer som vil være
+          nyttige for deg senere.</p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage14.png" alt="pic">
+        <p>Når du ser dette skjermbildet, er det bare å vente en stund mens VM-en konfigurerer installasjonsenheten fra
+          clouden.</p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage15.png" alt="pic">
+        <p>Når VM-en har konfigurert installasjonsenheten, bør du kunne se mange språkalternativer. Jeg anbefaler å
+          bruke engelsk for best beskrivelse av kommandoenes manualer. Det er likevel opp til deg å velge språket du
+          føler deg mest komfortabel med.
+        </p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage16.png" alt="pic">
+        <p>På dette stadiet må du velge hvilken type tastatur du bruker. Hvis du ikke vet hvilken type tastatur du har,
+          kan du klikke på «Identify Keyboard» for å la Ubuntu identifisere tastaturet ditt. Når du er ferdig, kan du
+          klikke på «Done» nederst på skjermen.
+        </p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage17.png" alt="pic">
+        <p>På dette stadiet velger du bare «Ubuntu Server» og klikker «Next». Du kan også gjøre en minnetest for å se
+          hvor godt RAM-en din fungerer, eller om den fungerer i det hele tatt.</p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage18.png" alt="pic">
+        <p>I dette steget skal vi sette opp nettverkstilkoblingen vår. Nettverkstilkoblingen er ansvarlig for å
+          kommunisere med andre datamaskiner ved å bruke IP-adresser eller MAC-adresser.
+          Nå skal vi sette opp en IP-adresse for PC-en vår. IP-adressen er som hjemmeadressen din, og det den gjør, er å
+          gi PC-en en adresse som gjør det mulig å kommunisere med andre.
+        </p>
+        <p>Vi vil også gi PC-en en gateway. Gatewayen gir PC-en tilgang utenfor nettverket vårt og lar oss også
+          kommunisere med hele internett.
+          I tillegg vil vi gi PC-en en DNS-serveradresse. DNS-serveren brukes til å konvertere nettsideadresser som
+          «google.com» til en IP-adresse som datamaskinen kan lese.</p>
+      </section>
+      <section class="stage">
+        <div class="imgBox">
+        <img src="/img/stage19.png" alt="pic">
+        <img src="/img/stage20.png" alt="pic">
+        <img src="/img/stage21.png" alt="pic">
+        </div>
+        <p>Velg linjen med navnet «ens18», velg «Edit IPV4» og til slutt endre fra «Disabled» til «Manual».
+          I det første feltet må du skrive inn subnettet (nettverket) PC-en din skal være i. Det er vanligvis noe som
+          «10.124.8.0/24». Du må også skrive inn en IP-adresse som PC-en din skal bruke.
+          Hvis subnettet ditt er «10.12.3.0/24», bør IP-adressen være et sted mellom «10.12.3.1 – 10.12.3.225». Du kan
+          ikke velge 0, 1 eller 225 fordi disse adressene brukes av nettverket ditt.
+        </p>
+        <p>For gateway kan du velge adressen «1», fordi dette er adressen til din dør ut til omverdenen. I neste felt gir
+          du PC-en en DNS-adresse. De mest lett huskbare er «1.1.1.1» for Cloudflare og «8.8.8.8» for Google.
+          Det neste feltet er ikke viktig for oss, så vi klikker bare «Done» og går videre til neste steg. Du kan også
+          hoppe over proxy-server-delen, da den ikke er viktig for oss.</p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage24.png" alt="pic">
+        <p>Her kan du bare vente til det står «Hit» to ganger, og deretter kan du gå videre til neste steg. </p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage25.png" alt="pic">
+        <p>Her kan du lage partisjoner for disken din. Partisjoner er ansvarlige for å dele opp harddisken, slik at du
+          får bedre oversikt og kontroll.
+          Vi skal ikke bruke plassen til noe annet enn å kjøre server og Nginx, så du kan bruke hele disken.
+          Når du er ferdig, kan du gå videre til neste steg.
+        </p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage28.png" alt="pic">
+        <p>På dette stadiet kan du bare fylle inn grunnleggende informasjon, som navnet ditt og serverens navn, samt
+          sette opp en administratorkonto som vil være administrator.</p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage29.png" alt="pic">
+        <p>Her kan du velge om du vil ha normal eller pro-versjon av Ubuntu. Pro-versjonen koster ekstra og har noen
+          andre funksjoner, så velg bare den nederste.</p>
+      </section>
+      <section class="stage"><img src="/img/stage30.png" alt="pic">
+        <p>Her så skal du ta og velge "Install OpenSSH server". En ssh server gjør det mulig å koble til vmen på
+          powershell eller terminalen på mac og jobbe derfra.
+          Man kan også bruke den for å koble filen til vscode for å redigere koden. Du kan også importere ssh nøkler fra
+          github for å ha mulighet å koble seg uten bruk av passord.
+          Når du er ferdig med det da kan du gå til neste steg. </p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage31.png" alt="pic">
+        <p>Når du ser det her bare trykk på "Done" for å begynne innstalasjonen av ubuntu.</p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage33.png" alt="pic">'
+        <p>Når vmen blir ferdig med å innstallere ubuntu og du ser knappen "Reboot Now" da kan du bare
+          trykke på den for å restartet pcen for å begynne å bruke operativ systemet.
+        </p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage34.png" alt="pic">
+        <p>Når du ser at det kommer opp feil meldinger som det her. Det er ingenting som du gjorde feil. Det er bare
+          pcen som spører om å plugge ut innstalasjons briken. Du må
+          ikke koble ut noe fra pcen din, så bare trykk på "ENTER" knappen på tastaturet.
+        </p>
+      </section>
+      <section class="stage">
+        <img src="/img/stage35.png" alt="pic">
+        <p>Når du ser noe lignende som det her da har du innstallert ubuntu serveren og da er du klar for å jobbe på
+          den.
+          Nå kan du bare logge inn via brukernavn og passordet du lagde. Du kan også koble via ssh på
+          terminalen/powershell
+          ved bruk av kommandoen "ssh (brukernavn)@(ip-adresse til vmen)". Hvis du har importert ssh keyen din da blir
+          du kobla til direkte uten å måtte skriv inn passord.
+        </p>
+      </section>
+    </main>
+    </body>
+
+    </html>
