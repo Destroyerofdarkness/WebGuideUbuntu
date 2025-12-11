@@ -2,18 +2,17 @@
   <%- include("./partials/header.ejs") %>
     <main>
       <h2>1. Oppsetting av VM-en</h2>
+      <section class="description">
+          Hensikten med å sette opp en virtuell maskin er for å ikke bruke unødvendig mye minne på pcen din. Virtuell maskin funker slik at
+          det lager en fake pc som finnes på en av proxmox sine servere, så det har ingenting å si for pc-en vår når vi
+          kjører noe på den. Den kjører også selv om vi skrur av pc-en vår. Hvis vi skal skru den av da må vi gå på proxmox nettsiden og skru den av manuelt.
+      </section>
       <section class="stage">
         <img src="/img/stage1.png" alt="pic" />
         <p>
-          Det første vi skal gjøre før vi setter opp Nginx og serveren, er å sette opp vår egen virtuelle maskin.
-          Hensikten med en virtuell maskin er at når vi skal kjøre en server da bruker ikke pc-en vår
-          noe som helst kraft for å kjøre den. Det er også for at pcen vår ikke blir ødelagt til slutt hvis vi kjører
-          den 24/7.
+          Det første vi skal gjøre før vi setter opp web-serveren, er å sette opp vår egen virtuelle maskin.
+          Vi skal bruke en VM istedenfor for å spare minne og ikke ødelegge pc deler. For å opprette en vm trykk på "Create a VM" opp i høyre hjørne.
         </p>
-        <p>Virtuell maskin funker slik at
-          det lager en fake pc som finnes på en av proxmox sine servere, så det har ingenting å si for pc-en vår når vi
-          kjører noe på den. For å
-          opprette VM-en, klikk på «Create VM».</p>
       </section>
       <section class="stage">
         <img src="/img/stage2.png" alt="pic" />

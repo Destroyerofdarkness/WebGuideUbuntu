@@ -14,5 +14,13 @@
   },
   "author": "megatron",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Destroyerofdarkness/WebGuideUbuntu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Destroyerofdarkness/WebGuideUbuntu/issues"
+  },
+  "homepage": "https://github.com/Destroyerofdarkness/WebGuideUbuntu#readme",
   "description": ""
 }

@@ -16,7 +16,6 @@ header{
     width: 100%;
     box-shadow: 0vw 0vw 1.4vw rgba(255, 255, 255, 0.756);
 }
-
 #navbar{
     display: flex;
     gap: 2vw;
@@ -45,6 +44,12 @@ main h2{
     font-family: var(--primary-font);
     font-size: 2vw;
 }
+.description{
+    font-size: 1.3vw;
+    width: 32vw;
+    margin-bottom: 1vw;
+    color: rgba(255, 255, 255, 0.536);
+}
 .stage{
     display: flex;
     justify-content: center;
@@ -59,7 +64,7 @@ main h2{
 }
 .stage p{
     color: rgba(255, 255, 255, 0.632);
-    width: 35vw;
+    width: 32vw;
     line-height: 1.6vw;
     font-size: 1vw;
     font-family: var(--primary-font);
