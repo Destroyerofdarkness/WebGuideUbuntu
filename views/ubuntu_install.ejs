@@ -2,6 +2,13 @@
   <%- include("./partials/header.ejs") %>
     <main>
       <h2>2. Innstalasjon av Ubuntu</h2>
+      <section class="description">
+        Ubuntu er en debian basert versjon av linux som er et operativ system og den funker slik at den ferdig
+        innstallerer verktøy som vi kan bruke. Vi skal innstallere Ubuntu versjon 22.04
+        som vi skal kun bruke for å ha en server oppe. De verktøyene vi skal bruke er kommandoer som ble innstalert
+        sammen med den. Vi må egt. ikke bruke Ubuntu for å hoste serveren vår men det er det vi har tilgjengelig.
+        Man kan bruke hvilket som helst versjon av Linux men det kan være forskjeller på noen kommandoer.
+      </section>
       <section class="stage">
         <img src="/img/stage12.png" alt="pic">
         <p>Når du er ferdig med å sette opp VM-en din, kan du begynne å installere Ubuntu på den virtuelle maskinen.
@@ -53,9 +60,9 @@
       </section>
       <section class="stage">
         <div class="imgBox">
-        <img src="/img/stage19.png" alt="pic">
-        <img src="/img/stage20.png" alt="pic">
-        <img src="/img/stage21.png" alt="pic">
+          <img src="/img/stage19.png" alt="pic">
+          <img src="/img/stage20.png" alt="pic">
+          <img src="/img/stage21.png" alt="pic">
         </div>
         <p>Velg linjen med navnet «ens18», velg «Edit IPV4» og til slutt endre fra «Disabled» til «Manual».
           I det første feltet må du skrive inn subnettet (nettverket) PC-en din skal være i. Det er vanligvis noe som
@@ -63,7 +70,8 @@
           Hvis subnettet ditt er «10.12.3.0/24», bør IP-adressen være et sted mellom «10.12.3.1 – 10.12.3.225». Du kan
           ikke velge 0, 1 eller 225 fordi disse adressene brukes av nettverket ditt.
         </p>
-        <p>For gateway kan du velge adressen «1», fordi dette er adressen til din dør ut til omverdenen. I neste felt gir
+        <p>For gateway kan du velge adressen «1», fordi dette er adressen til din dør ut til omverdenen. I neste felt
+          gir
           du PC-en en DNS-adresse. De mest lett huskbare er «1.1.1.1» for Cloudflare og «8.8.8.8» for Google.
           Det neste feltet er ikke viktig for oss, så vi klikker bare «Done» og går videre til neste steg. Du kan også
           hoppe over proxy-server-delen, da den ikke er viktig for oss.</p>
