@@ -4,7 +4,7 @@ const index_render = (req, res) => {
     console.log("Loaded in homepage");
   } catch (err) {
     console.log(err);
-    res.status(500).json({ err });
+    res.status(500).send(err);
   }
 };
 
@@ -21,8 +21,18 @@ const render_ubuntu_install = (req, res) => {
   }
 };
 
+const render_node_server = (req,res)=>{
+  try{
+    res.render("node_server")
+  }catch(err){
+    console.log(err);
+    res.status(500).send(err)
+  }
+}
+
 module.exports = {
   index_render,
   redirect_to_first,
-  render_ubuntu_install
+  render_ubuntu_install,
+  render_node_server
 };

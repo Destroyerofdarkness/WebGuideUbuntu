@@ -1,0 +1,61 @@
+<%- include("./partials/head.ejs") %>
+    <%- include("./partials/header.ejs") %>
+        <main>
+            <h2>3. Kjøre server ved nodemon</h2>
+            <section class="description"> Nodemon er en npm package som man kan laste ned via "npm install" kommandoen i
+                terminalen. Nodemon funker slik at
+                at den lar oss automatisk oppdatere endringer på serveren uten å måtte gjenopprette siden på
+                nettleseren. Endringer i public mappen blir ikke det så da må man
+                gjenopprette siden. For å i det hele tatt kunne innstallere og kjøre nodemon da må må innstallere node
+                på <span><a href="https://nodejs.org/en/download">Node.js</a></span> nettsiden.</section>
+            <section class="stage">
+                <img src="/img/stage36.png" alt="pic">
+                <p>Når vi har node innstalert da kan vi opprette en mappe som vi skal bruke, gå inn i den også kan vi
+                    kjøre kommandoen vist på bilde.
+                    Det den gjør er at den innstaller pakker fra "Node Package Manager" som vi skal bruke for å kjøre
+                    serveren vår. Express er det vi skal
+                    bruke for at filen skal kunne starte en server på nettleseren. For å lese mer om Express gå her:
+                    <span><a href="https://www.npmjs.com/package/express">Npmjs.com</a>.</span>
+                </p>
+                <p>Pakkene som blir innstalert går til
+                    node_modules mappen. De kommer også opp som referanse i package.json filen som vi kan bruke for å
+                    innstallere alt uten å måtte skrive ned alle pakkene.</p>
+            </section>
+            <section class="stage">
+                <img src="/img/stage37.png" alt="pic">
+                <p>Etter vi har fått innstalert alle pakker vi trenger da kan vi importere pakken ved bruk av koden
+                    oppe. Det første du må gjøre før det er å lage en app.js
+                    fil hvor alt skal styres og den skal alltid være i root mappen. Det å importere denne typen pakken
+                    er å få inn ekstra kode som ligger i funksjonene i den pakken.
+
+                </p>
+                <p>Vi forenkler funksjonen express() til å være "app" og det gjør lettere for oss å lese den etterpå,
+                    uten paranteser. Hvis man har nyere versjon av ES da må man bruke "import (navn) from '(navnet på
+                    pakken)' ".</p>
+            </section>
+            <section class="stage">
+                <img src="/img/stage38.png" alt="pic">
+                <p>Etter det så kan vi nederst i koden "app.listen()". Det app.listen gjør er at den prøver å bruke en
+                    port i pcen som skal brukes for å hoste filen på nettleseren. Det
+                    vi hatt satt opp som port er 3000, som er den vanlige porten for man skal hoste nettsiden.
+                    Argumentet etter kommaen kjører en callback function som logger innholde i konsolen.
+                </p>
+                <p>Da kan egt. hoste en server nå som kjører på porten 3000, men problemet er at den har ikke noe
+                    innhold å vise. Da må vi lage en rute som vi kan bruke på nettleseren.</p>
+            </section>
+            <section class="stage">
+
+            </section>
+            <section class="stage">
+
+            </section>
+            <section class="stage">
+
+            </section>
+            <section class="stage">
+
+            </section>
+        </main>
+        </body>
+
+        </html>
