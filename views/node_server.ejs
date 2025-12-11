@@ -44,16 +44,86 @@
                     innhold å vise. Da må vi lage en rute som vi kan bruke på nettleseren.</p>
             </section>
             <section class="stage">
-
+                <div class="imgBox2">
+                    <img src="/img/stage39.png" alt="pic">
+                    <img src="/img/stage40.png" alt="pic">
+                    <img src="/img/stage41.png" alt="pic">
+                    <img src="/img/stage42.png" alt="pic">
+                </div>
+                <p>Det vi må gjøre nå er laste ned en pakke kalt "ejs" fra npm. Ejs er en slags extension som funker
+                    likt som vanlig html, men med noen ekstra funksjoner. For å lese mer trykk her <span><a
+                            href="https://www.npmjs.com/package/ejs">Npmjs.com</a></span>. Når vi har gjort det da
+                    trenger vi ikke å importere den, men istedenfor skal vi sette den til å være vår view engine.
+                </p>
+                <p>
+                    En view engine gjør det mulig å rendere filer bare med navnet dems uten å måtte skrive filtypen
+                    bakerst. Vi skal sette den til ejs fordi vi skal få opp de filene i nettleseren vår.
+                </p>
+                <p>Etter det så kan vi lage en rute ved app.get med en callback
+                    funksjon som andre argument. Denne funksjonen skal sende en respons tilbake
+                    med at den skal rendere filen index. Vi må da lage en index.ejs fil i views mappe som vi må også
+                    lage. </p>
             </section>
             <section class="stage">
-
+                <img src="/img/stage43.png" alt="pic">
+                <p>Når du har lagd ruten din i app.js filen da kan du starte serveren ved bruk av "nodemon app.js" også
+                    kan du skrive inn i nettleren innholdet på bilde. Da burde
+                    det komme opp ting som ble skrevet inn i index filen. Localhost er den lokalle maskinen vi bruker,
+                    så da trenger vi ikke å skrive inn ip-adressen for nå. </p>
             </section>
             <section class="stage">
-
+                <img src="/img/stage44.png" alt="pic">
+                <p>Etter vi har gjort det vi skulle må vi lage en github repository og pushe filene våre inn i den. Det
+                    skal gjøre for å etterpå hente dem
+                    ut i vmen vår hvor den skal egt. hostes. For å lese om hvordan du gjør det gå hit: <span><a
+                            href="https://www.datacamp.com/tutorial/git-push-pull">Datacamp.com</a></span>.</div>
+                </p>
             </section>
             <section class="stage">
+                <img src="/img/sshLogin.png" alt="pic">
+                <div class="imgBox2">
+                    <img src="/img/stage45.png" alt="pic">
+                    <img src="/img/stage46.png" alt="pic">
+                </div>
+                <p>Etter vi har lagd en repository og pushet filene inn da kan vi logge på vmen via ssh ved kommandoen
+                    overst på terminalen/powershell.
+                    Etter det så må innstallere git på vmen for å klone filene.
 
+                </p>
+                <p>Git er et verktøy som vi kan bruke for å
+                    versjonskontrollere og klone filer fra en extension som heter Github. For å lese mer om git og
+                    github trykk her: <span><a
+                            href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">Hubspot.com</a></span>.
+                </p>
+                <p>Vi må også innstallere node ved bruk av kommandoen "sudo apt install -y npm". Da innstaller man både
+                    node og npm.</p>
+            </section>
+            <section class="stage">
+                <img src="/img/stage47.png" alt="pic">
+                <p>Etter vi har innstalert både node, npm og git da kan vi begynne med å klone filene våre fra github
+                    ved å skrive "git clone 'klone lenke'". For å få sånn type lenke da må du gå til repositorien din og
+                    trykke code og velge en https lenke.
+                    Etter vi gjør det så får vi alle filene som er på den repoen på github. Den lager da et mappe med
+                    samme navnet som repoen er også kan vi gå inn i den.
+                </p>
+            </section>
+            <section class="stage">
+                <img src="/img/stage48.png" alt="pic">
+                <p>Etter vi fikk over alle filene våre da kan gå inn i filen ved bruk av "cd 'path' " kommandoen. Etter
+                    på så kan vi bruke kommandoen "npm i" og den bruker package.json filen som referanse for hva slags
+                    pakker vi skal ha med. Etter det så kan vi starte serveren ved bruk "nodemon app.js".</p>
+            </section>
+            <section class="stage">
+                <div class="imgBox">
+                    <img src="/img/stage49.png" alt="pic">
+                </div> 
+                <p>Etter vi har starta serveren på vm-en da kan vi åpne nettleseren på den lokale maskinen å skrive inn
+                    ip-adressen til vm-en, hvilket port bruker den og til sist stien du skal komme deg til.
+                </p>
+                <p>Da har du klart nå å opprette en vm med en ubuntu server som hoster en nettside på en viss port. Jeg
+                    anbefaler å lese om ting som git, npm, node, linux kommandoer, Openssh server og hvordan man bruker
+                    express. Ellers så har du klart å lage en fungerende server som kjører på vm som har ingen betydning
+                    for minnen på din maskin.</p>
             </section>
         </main>
         </body>

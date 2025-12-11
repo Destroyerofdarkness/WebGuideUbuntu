@@ -71,10 +71,19 @@ main h2{
 }
 .imgBox{
     display: flex;
+    gap: 1vw;
 }
 .imgBox img{
     width: auto;
     height: 10vw;
+}
+.imgBox2{
+    display: flex;
+    gap: 1vw;
+}
+.imgBox2 img{
+    width: auto;
+    height: 3vw;
 }
 :root{
     --primary-font: "Inria Serif", serif;
